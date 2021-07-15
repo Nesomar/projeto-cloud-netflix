@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Component
-@FeignClient(name = "${hr-worker.name}", path = "${hr-worker.path}", decode404 = true)
+@FeignClient(name = "${hr-worker.name}", url = "${hr-worker.url}", path = "${hr-worker.path}", decode404 = true)
 public interface WorkerFeignClient {
 
     @GetMapping(value = "/{id}")
